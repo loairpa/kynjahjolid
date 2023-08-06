@@ -122,7 +122,8 @@ const props = {
     pointerAngle:  0,
     borderColor:  '#f9f5e9',
     borderWidth: 5,
-    onRest: function(e) { answer.innerHTML = langurTexti[e.currentIndex];},
+    onRest: function(e) { answer.innerHTML = langurTexti[e.currentIndex];
+    if( e.currentIndex == 11 ) play_virkur_atugasemdum();},
     onSpin: function(e) {answer.innerHTML = ""},
     onCurrentIndexChange: function(e) {
       play();
@@ -161,7 +162,11 @@ const props = {
   function play() {
     var audio = new Audio('./sounds/55046_histicks.mp3');
     audio.play();
-    audio.re
+  }
+
+  function play_virkur_atugasemdum() {
+    var audio = new Audio('./sounds/ES_Voice Clip Male 300 - SFX Producer.mp3');
+    audio.play();
   }
 
 }
